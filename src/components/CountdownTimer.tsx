@@ -40,14 +40,14 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ team }) => {
   const formatTime = (seconds: number) => {
     const minutes = Math.floor(seconds / 60);
     const secs = seconds % 60;
-    return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+    return minutes > 0 ? `${minutes}:${secs < 10 ? '0' : ''}${secs}` : `${secs}s`;
   };
 
   return (
     <div className={`flex items-center justify-center h-screen w-screen ${flash ? 'bg-red-500 text-white' : end ? 'bg-white text-black' : 'bg-black text-white'} transition-colors duration-500`}>
       {end ? (
-        <div className="w-full h-full flex justify-center items-center flex-col">
-          <h1 className="text-[10rem] font-bold">PITCH END</h1>
+        <div className="w-full h-full flex justify-center items-center flex-col gap-10">
+          <h1 className="text-[14rem] font-bold">PITCH END</h1>
           <Image src="/dataaisummitlogo.svg" width={500} height={500} alt="Databricks Data + AI Summit Logo" />
         </div>
       ) : (
@@ -57,7 +57,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ team }) => {
                 Team {team.number}: {team.name}
               </div>
           </div>
-          <h1 className="text-[20rem] font-bold mb-8">{formatTime(time)}</h1>
+          <h1 className="text-[32rem] font-bold mb-8 leading-none">{formatTime(time)}</h1>
           <Image src="/dataaisummitlogo-white.svg" width={500} height={500} alt="Databricks Data + AI Summit Logo" />
         </div>
       )}

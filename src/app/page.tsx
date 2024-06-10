@@ -2,11 +2,15 @@
 
 import CountdownTimer from "@/components/CountdownTimer"
 import { useState } from "react";
+import { DM_Mono } from 'next/font/google'
 
 type Team = {
   name: string;
   number: number;
 };
+
+const dmmono = DM_Mono({ subsets: ['latin'], weight: "500" })
+
 
 export default function Home() {
   const [selectedTeam, setSelectedTeam] = useState<Team>();
@@ -21,7 +25,7 @@ export default function Home() {
 
 
   return (
-    <div className="w-screen h-screen flex justify-center items-center flex-col gap-3">
+    <div className={`w-screen h-screen flex justify-center items-center flex-col gap-3 ${dmmono.className}`}>
       {!selectedTeam ? (
         <>
           <p className="font-bold text-3xl">Select a team:</p>
