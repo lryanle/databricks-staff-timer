@@ -15,12 +15,13 @@ const dmmono = DM_Mono({ subsets: ['latin'], weight: "500" })
 export default function Home() {
   const [selectedTeam, setSelectedTeam] = useState<Team>();
 
-  const teams: Team[] = [
-    { name: 'Team Alpha', number: 1 },
-    { name: 'Team Bravo', number: 2 },
-    { name: 'Team Charlie', number: 3 },
-    { name: 'Team Delta', number: 4 },
-    { name: 'Team Echo', number: 5 },
+  const teams: Team[] = [ // 18 42 19 23 43 50
+    { name: 'Smart Real Estate Advisor', number: 18 },
+    { name: 'Medication Regimen Optimization using LLMs', number: 42 },
+    { name: 'Xtillion', number: 19 },
+    { name: 'HomeGPT', number: 23 },
+    { name: 'Totally Awesome Game Generator', number: 43 },
+    { name: 'CLHI', number: 50 },
   ];
 
 

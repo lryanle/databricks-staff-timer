@@ -54,7 +54,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ team }) => {
         <div className="text-center flex justify-center items-center flex-col">
           <div className="space-y-4">
               <div className="text-6xl">
-                Team {team.number}: {team.name}
+                {team.name}
               </div>
           </div>
           <h1 className="text-[32rem] font-bold mb-8 leading-none">{formatTime(time)}</h1>
