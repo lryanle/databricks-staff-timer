@@ -20,7 +20,6 @@ export default function Home() {
     { name: 'Medication Regimen Optimization using LLMs', number: 42 },
     { name: 'Xtillion', number: 19 },
     { name: 'HomeGPT', number: 23 },
-    { name: 'Totally Awesome Game Generator', number: 43 },
     { name: 'CLHI', number: 50 },
   ];
 
